@@ -1,8 +1,9 @@
 
 const chai = require('chai');
-const Classe = require('../app/classe');
 
-const calc = new Classe()
+const Calc = require('../app/calc');
+
+const calc = new Calc()
 
 describe('Teste da classe', () => {
     it('Testar a soma', () => {
@@ -21,3 +22,4 @@ describe('Teste da classe', () => {
         chai.expect(calc.divisao(5, 2)).to.equal(2.5);
     });
 });
+
