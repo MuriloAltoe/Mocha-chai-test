@@ -1,9 +1,7 @@
-const { exec } = require('child_process');
 const chai = require('chai');
 const axios = require('axios');
 
 const app = require('../app/api');
-const { json } = require('express');
 
 const App = app
 let server
@@ -52,9 +50,8 @@ describe('Teste de API', () => {
 
         const response = await axios.get('http://localhost:3000/items', requisicao);
 
-        chai.expect(response.status).to.equal(200);
-        // chai.expect(response.json).to.equal();
-        
+        chai.expect(response.status).to.equal(200);  
+                
     });
 
 });
